@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --primary-color: rgb(45, 74, 128);
+    --primary-color: rgb(223, 232, 247);
     --secondary-color: rgb(182, 76, 27);
     --grayscale: rgb(226, 218, 218);
     --friendly: green;
@@ -19,49 +19,88 @@
     box-sizing: border-box;
 }
 
-.navbar {
-    height: 3.75rem;
-}
-.flex-vcentered {
-    @apply flex items-center;
+body {
+    min-width: 450px;
 }
 
-.nav-items-between {
-    @apply justify-between;
+.navbar {
+    @apply sticky top-0 mx-auto px-2 w-full h-auto bg-slate-600;
+}
+
+.nav-wrapper {
+    @apply h-14 bg-slate-600 w-full;
 }
 
 .brand {
-    width: 10rem;
     max-width: 12rem;
     color: var(--primary-color);
-    @apply text-5xl my-2 mx-5;
-}
-
-.nav-left {
-    @apply justify-start;
-}
-
-.nav-right {
-    @apply justify-end;
+    @apply text-4xl p-2;
 }
 
 .nav-item {
-    margin: 0 2rem;
-    @apply flex w-full lg:w-auto;
+   @apply mx-2 p-1 rounded lg:mx-8 w-full lg:w-auto hover:scale-105 hover:backdrop-brightness-125 hover:shadow transition-all;
 }
 
-.burger-menu {
-    width: 8rem;
-    max-width: 10rem;
-    border: 2px solid blueviolet;
+.nav-link {
+    @apply text-center p-1
 }
 
-.nav-items-top {
-    margin: 0;
-    top: 3.75rem;
-    left: 0;
+.text-input {
+    @apply py-0.5 px-2 border rounded-l text-slate-800;
 }
 
-.nav-items-link {
-    @apply flex w-full lg:w-auto;
+.avatar {
+    width: 2rem;
+    height: 2rem;
+    color: whitesmoke;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: whitesmoke;
+}
+
+.tailzup-logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+.glow {
+    animation: glow 0.8s alternate infinite;
+}
+
+@keyframes glow {
+    0% {                        
+        filter: drop-shadow(0 0 1px #fff)
+        drop-shadow(0 0 2px #fff)
+        drop-shadow(0 0 3px #ff80b3)
+        drop-shadow(0 0 4px #ff4d94)
+        drop-shadow(0 0 5px #ff0066)
+    }
+     29% {
+        filter: drop-shadow(0 0 2px #fff)
+        drop-shadow(0 0 4px #fff)
+        drop-shadow(0 0 6px #ff80b3)
+        drop-shadow(0 0 8px #ff4d94)
+        drop-shadow(0 0 10px #ff0066)
+    }
+
+    92% {
+        filter: drop-shadow(0 0 3px #fff)
+        drop-shadow(0 0 6px #fff)
+        drop-shadow(0 0 9px #ff80b3)
+        drop-shadow(0 0 12px #ff4d94)
+        drop-shadow(0 0 15px #ff0066)
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0 1px)
+    }
+
+    100% {
+        transform: translate(0 2)
+    }
 }
