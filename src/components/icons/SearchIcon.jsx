@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchIcon = () => {
+export const SearchIcon = () => {
   return (
     <button className="px-2 py-0.5 border rounded-r hover:rounded-r hover:border-slate-400 hover:bg-slate-500 transition ease-in-out duration-50" href="/">
         <svg
@@ -20,5 +20,3 @@ const SearchIcon = () => {
     </button>
   );
 };
-
-export default SearchIcon;

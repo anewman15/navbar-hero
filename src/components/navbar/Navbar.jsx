@@ -1,68 +1,37 @@
 import React, { useState } from "react";
-import Avatar from "../icons/Avatar";
-import SearchIcon from "../icons/SearchIcon";
-import HamburgerIcon from "../icons/HamburgerIcon";
 import TailzupLogo from "../icons/TailzupLogo";
-import { UserIcon } from "@heroicons/react/24/outline";
-import {  } from "@heroicons/react/24/outline";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { Avatar } from "../icons/Avatar";
+import { HamburgerIcon } from "../icons/HamburgerIcon";
+import { SearchIcon } from "../icons/SearchIcon";
+
 
 const Navbar = () => {
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const menuHidden = !isMobileMenuOpen ? "hidden md:block": "" ;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuHidden = !isMobileMenuOpen ? "hidden md:block": "" ;
   return (
-    <nav
-      className="
-									navbar
-									flex flex-col justify-start md:flex-row md:justify-between md:items-center
-								"
-    >
-      <div
-        className="
-										nav-wrapper
-										flex justify-start items-center flex-1 self-start
-									"
-      >
+    <nav className="navbar">
+      <div className="brand-wrapper">
         <a className="brand" href="/">
-          <TailzupLogo color="#f0f9ff" />
+          <TailzupLogo color="orange" />
         </a>
       </div>
       <div
         className={`${menuHidden} border-t border-slate-500 md:border-none text-amber-50 transition-all ease-in-out duration-1000`}
       >
-        <div
-          id="items"
-          className="
-											my-2
-											flex flex-col justify-start items-start
-											md:flex-row md:justify-start md:items-center
-										"
-        >
-          <div
-            className="
-												left mx-2 p-2
-												order-last md:order-none
-												flex justify-center items-center
-											"
-          >
+        <div id="items" className="items-strip">
+          <div id="left" className="items-left">
             <input
               className="text-input"
               type="email"
-              placeholder="Find danielle trump or storm..."
+              placeholder="Find donald trump or something..."
             />
-            <MagnifyingGlassIcon className="h-6 w-6 mx-1 hover:glow" />
+            <SearchIcon className="h-6 w-6 mx-1 stroke-orange-400" />
           </div>
-          <div>
-            <ul
-              id="right"
-              className="
-													flex flex-col
-													md:flex-row md:justify-start md:items-center
-												"
-            >
+          <div id="right" >
+            <ul className="items-list">
               <li className="nav-item md:order-last">
                 <a href="/">
-                  <UserIcon className="h-8 w-8 stroke-1 glow" />
+                  <Avatar className="h-8 w-8 glow" stroke="pink" strokeWidth={1.2} />
                 </a>
               </li>
               <li className="nav-item">
@@ -84,10 +53,14 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <HamburgerIcon
-        isMobileMenuOpen={isMobileMenuOpen}
-        setIsMobileMenuOpen={setIsMobileMenuOpen}
-      />
+      <div
+          className={`absolute top-3 right-4 p-1 border border-orange-400 rounded md:hidden text-slate-500 hover:text-slate-300 hover:bg-orange-200`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        <a href="/">
+          <HamburgerIcon className="h-6 w-6" />
+        </a>
+      </div>
     </nav>
   );
 };

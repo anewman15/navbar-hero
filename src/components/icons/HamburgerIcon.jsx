@@ -1,17 +1,19 @@
 import React from "react";
-import { Bars4Icon } from "@heroicons/react/24/solid";
 
-const HamburgerIcon = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
+export const HamburgerIcon = () => {
   return (
-    <div
-        className={`absolute top-3 right-4 p-1 border border-slate-500 rounded md:hidden text-slate-500 hover:text-slate-300 hover:bg-slate-500`}
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-    >
-        <a>
-            <Bars4Icon className="w-8 h-8" stroke="yellow" style={{border: "1px solid orange"}}/>
-        </a>
-    </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="orange"
+      className="w-6 h-6">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+      />
+    </svg>
   );
 };
-
-export default HamburgerIcon;

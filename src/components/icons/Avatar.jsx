@@ -1,6 +1,6 @@
 import React from "react";
 
-const Avatar = () => {
+export const Avatar = () => {
   return (
     <a href="/">
         <svg
@@ -20,5 +20,3 @@ const Avatar = () => {
     </a>
   );
 };
-
-export default Avatar;
