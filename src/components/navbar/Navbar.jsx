@@ -25,13 +25,13 @@ const Navbar = () => {
               type="email"
               placeholder="Find donald trump or something..."
             />
-            <SearchIcon className="h-6 w-6 mx-1 stroke-orange-400" />
+            <SearchIcon />
           </div>
           <div id="right" >
             <ul className="items-list">
               <li className="nav-item md:order-last">
                 <a href="/">
-                  <Avatar className="h-8 w-8 glow" stroke="pink" strokeWidth={1.2} />
+                  <Avatar />
                 </a>
               </li>
               <li className="nav-item">
@@ -58,7 +58,7 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         <a href="/">
-          <HamburgerIcon className="h-6 w-6" />
+          <HamburgerIcon />
         </a>
       </div>
     </nav>

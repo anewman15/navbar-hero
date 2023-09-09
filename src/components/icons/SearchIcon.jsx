@@ -9,7 +9,7 @@ export const SearchIcon = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="icon"
+            className="h-6 w-6"
             >
             <path
                 strokeLinecap="round"

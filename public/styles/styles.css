@@ -571,11 +571,6 @@ video {
   right: 1rem;
 }
 
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
 .block {
   display: block;
 }
@@ -592,16 +587,8 @@ video {
   height: 1.5rem;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .w-6 {
   width: 1.5rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .transform {
@@ -642,10 +629,6 @@ video {
 .border-orange-400 {
   --tw-border-opacity: 1;
   border-color: rgb(251 146 60 / var(--tw-border-opacity));
-}
-
-.stroke-orange-400 {
-  stroke: #fb923c;
 }
 
 .p-1 {
