@@ -1,8 +1,8 @@
-# Starter Files for Navbar with Heroicons
+# Starter Files for Navbar with 🦸🦸‍♀️Heroicons:100:
 
 This repo has the starter files for a navbar with Heroicons, as featured in [this refine.dev blog post](https://refine.dev/blog/heroicons-with-tailwind/#introduction).
 
-## Local Deployment
+## :star2:Local Deployment :star::partying_face: 
 
 Open it in your code editor and run:
 
@@ -11,13 +11,13 @@ npm install
 npm run start
 ```
 
-### Install Heroicons
+### :star2:Install Heroicons:star::100:
 
 ```bash
 npm install @heroicons/react
 ```
 
-### Compile TailwindCSS
+### :star2:Compile TailwindCSS:star::100:
 
 And then to compile newly added TailwindCSS classes, run the CSS compiler in `watch` mode:
 
@@ -25,7 +25,7 @@ And then to compile newly added TailwindCSS classes, run the CSS compiler in `wa
 npx tailwindcss -i ./src/styles/styles.css -o ./public/styles/styles.css --watch
 ```
 
-### Follow the Herocions Tutorial on refine.dev Blog
+### :star2:Follow the Herocions Tutorial on refine.dev Blog:star::partying_face:
 
 Then follow the [Using Heroicons with TailwindCSS tutorial here](https://refine.dev/blog/heroicons-with-tailwind/#introduction).
 
